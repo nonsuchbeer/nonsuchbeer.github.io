@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Neutraface";
+  font-weight: normal;
+  src: url("fonts/Neutraface No. 2 Text Book.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neutraface";
+  font-weight: bold;
+  src: url("fonts/Neutraface No. 2 Text Bold.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kepler Std";
+  font-weight: normal;
+  src: url("fonts/KeplerStd-MediumExtCapt.otf");
+}
+
+@font-face {
+  font-family: "Kepler Std";
+  font-weight: 800;
+  src: url("fonts/KeplerStd-BlackExtCapt.otf");
+}
+
+@font-face {
+  font-family: "Velour Raw";
+  font-weight: normal;
+  src: url("fonts/Velour Raw Semi Bold.otf");
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant: common-ligatures;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+/* MENU MAIN STRUCTURE
+============================================================================= */
+.menu {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 150px;
+  font-family: "Neutraface";
+font-variant-numeric: lining-nums
+}
+
+.menu__content {
+  margin-bottom: auto;
+}
+
+.menu__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: baseline;
+  grid-gap: 25px;
+}
+
+.menu__footer-column {}
+
+
+/* MENU ITEM
+============================================================================= */
+.menu__item {
+  color: #fff;
+  font-size: 72px;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.menu__item-info {
+  flex: 1;
+}
+
+.menu__item-title {
+  display: flex;
+}
+
+.menu__item-title-text--mute {
+  opacity: 0.5;
+}
+
+.menu__item-title-text {
+  flex: none;
+  display: block;
+}
+.menu__item-title-dots {
+  display: block;
+  flex: 1;
+  height: 66px;
+  margin: 0px 5px;
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+
+.menu__item-details {
+  font-size: 32px;
+  font-family: "Velour Raw";
+  font-weight: normal;
+}
+
+.menu__item-details--price {
+  color: #cead63;
+}
+
+
+/* MENU SUB-ITEM
+============================================================================= */
+.menu__sub-item {
+  font-size: 32px;
+  color: #fff;
+  font-family: "Velour Raw";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu__sub-item:last-child {
+  margin-bottom: 0px;
+}
+
+.menu__sub-item-text {
+
+}
+
+.menu__sub-item-accessory {
+  color: #cead63;
+  margin-left: 10px;
+}
