@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#tap1").load("tap1.html"); 
+    });
+    </script> 
   <meta charset="UTF-8">
   <title>Screen 1</title>
   <link rel="stylesheet" href="css/main.css" />
@@ -13,7 +19,7 @@
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text">TESTING</span>
+            <span class="menu__item-title-text"><div id="tap1"></div></span>
             <span class="menu__item-title-dots"></span>
           </div>
           <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
