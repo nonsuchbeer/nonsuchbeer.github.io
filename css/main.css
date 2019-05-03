@@ -144,14 +144,5 @@ font-variant-numeric: lining-nums
 
 .menu__sub-item-accessory {
   color: #cead63;
-  margin-left: 10px;
-  font-family: "Velour Raw";
-  font-size: 25px;
-}
-
-.menu__sub-item-accessory2 {
-  color: #cead63;
-  margin-left: 10px;
-  font-family: "Velour Raw";
-  font-size: 15px;
+  margin-left: 6px;
 }
