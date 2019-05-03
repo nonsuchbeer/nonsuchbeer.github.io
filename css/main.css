@@ -144,5 +144,6 @@ font-variant-numeric: lining-nums
 
 .menu__sub-item-accessory {
   color: #cead63;
-  margin-left: 6px;
+  margin-left: 10px;
+  font-size: 25px;
 }
