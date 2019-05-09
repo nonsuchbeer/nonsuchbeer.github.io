@@ -1,83 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Screen 1</title>
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
-
-  <div class="menu">
-    <main class="menu__content">
-
-      <div class="menu__item">
-        <div class="menu__item-info">
-          <div class="menu__item-title">
-            <span class="menu__item-title-text">Ben’s Beer</span>
-            <span class="menu__item-title-dots"></span>
-          </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
-        </div>
-        <div class="menu__item-accessory">
-          7.0<sup>%</sup>
-        </div>
-      </div>
-
-      <div class="menu__item">
-        <div class="menu__item-info">
-          <div class="menu__item-title">
-            <span class="menu__item-title-text">LA MOLIÈRE CRAFT PILSNER</span>
-            <span class="menu__item-title-dots"></span>
-          </div>
-          <!-- <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div> -->
-        </div>
-        <div class="menu__item-accessory">
-          6.0<sup>%</sup>
-        </div>
-      </div>
-
-      <div class="menu__item">
-        <div class="menu__item-info">
-          <div class="menu__item-title">
-            <span class="menu__item-title-text">TRIPEL</span>
-            <span class="menu__item-title-dots"></span>
-          </div>
-          <!-- <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div> -->
-        </div>
-        <div class="menu__item-accessory">
-          9.3<sup>%</sup>
-        </div>
-      </div>
-
-      <div class="menu__item">
-        <div class="menu__item-info">
-          <div class="menu__item-title">
-            <span class="menu__item-title-text">BALTIC PORTER</span>
-            <span class="menu__item-title-dots"></span>
-          </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
-        </div>
-        <div class="menu__item-accessory">
-          6.0<sup>%</sup>
-        </div>
-      </div>
-
-    </main>
-    <footer class="menu__footer">
-      <div class="menu__footer-column">
-        <div class="menu__sub-item">
-          <span class="menu__sub-item-text">FULL POURS</span>
-          <span class="menu__sub-item-accessory">7<sup>$</sup></span>
-        </div>
-      </div>
-      <div class="menu__footer-column">
-        <div class="menu__sub-item">
-          <span class="menu__sub-item-text">SMALL POURS 12cL/4oz</span>
-          <span class="menu__sub-item-accessory">3<sup>$</sup></span>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-</body>
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #messages { margin-bottom: 40px }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(function () {
+        var socket = io();
+        $('form').submit(function(){
+          socket.emit('chat message', $('#m').val());
+          $('#m').val('');
+          return false;
+        });
+        socket.on('chat message', function(msg){
+          $('#messages').append($('<li>').text(msg));
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+      });
+    </script>
+  </body>
 </html>
