@@ -2,35 +2,20 @@
 <html lang="en">
 <head>
   <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#tap1").load("tap1.html"); 
-    });
-    </script> 
-  <script> 
-    $(function(){
-      $("#tap2").load("tap2.html"); 
-    });
-    </script> 
-  <script> 
-    $(function(){
-      $("#tap3").load("tap3.html"); 
-    });
-    </script> 
-  <script> 
-    $(function(){
-      $("#tap4").load("tap4.html"); 
-    });
-    </script> 
+ 
     <script>
     $(document).ready(function() {
   setInterval(function() {
     cache_clear()
   }, 3000);
+   $("#tap1").load("tap1.html"); 
+    $("#tap2").load("tap2.html"); 
+     $("#tap3").load("tap3.html"); 
+      $("#tap4").load("tap4.html"); 
 });
 
 function cache_clear() {
-  window.location.reload();
+  window.location.reload(true);
   // window.location.reload(); use this if you do not remove cache
 }
 </script>
