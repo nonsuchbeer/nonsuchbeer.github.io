@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="jquery.js"></script> 
- <script src="index.js"></script>
   <script type='text/javascript' src='handle_login.js?w=2'></script>
     <script type='text/javascript' src='read_single_range.js?w=2'></script>
     <script>
