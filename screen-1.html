@@ -118,6 +118,10 @@ function cache_clear() {
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
 
+
+    <?php
+    echo $row[0];
+    ?>
   <div class="menu">
 
     <div class="row">
@@ -127,7 +131,15 @@ function cache_clear() {
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text"><div id="tap1"></div></span>
+            <span class="menu__item-title-text"><?php
+    
+      echo "<div style='clear:both'>";
+      for($col = 0; $col < 3; $col++) {
+        echo "<input type='text' style='float:left;' name = '$row:$col' id='$row:$col'>";
+      }
+      echo "</div>";
+    }
+    ?></span>
             <span class="menu__item-title-dots"></span>
           </div>
           <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
