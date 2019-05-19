@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="jquery.js"></script> 
- <script src="index.js"></script>
   <script type='text/javascript' src='handle_login.js?w=2'></script>
     <script type='text/javascript' src='read_single_range.js?w=2'></script>
     <script>
@@ -49,6 +47,16 @@ function cache_clear() {
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
 
+<div style="margin-left:auto; margin-right:auto; width:960px;">
+    <?php
+    for($row = 0; $row < 8; $row++) {
+      echo "<div style='clear:both'>";
+      for($col = 0; $col < 3; $col++) {
+        echo "<input type='text' style='float:left;' name = '$row:$col' id='$row:$col'>";
+      }
+      echo "</div>";
+    }
+    ?>
 
     
   <div class="menu">
