@@ -83,7 +83,7 @@ function listMajors(auth) {
       console.log('Name, Major:');
       // Print columns A and E, which correspond to indices 0 and 4.
       rows.map((row) => {
-        console.log(`${row[0]}, ${row[4]}`);
+        window.alert(`${row[0]}, ${row[4]}`);
       });
     } else {
       console.log('No data found.');
