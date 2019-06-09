@@ -84,7 +84,7 @@
 </html>
 <script>
 $(document).ready(function(){
-  $.getJSON("menu.json", function(data){
+  $.getJSON("menu.json?nocache=123", function(data){
       var menu_data = '';
       $.each(data, function(key, value){
         menu_data = value.title;
