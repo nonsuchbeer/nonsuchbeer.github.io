@@ -62,9 +62,6 @@ font-variant-numeric: lining-nums
 
 .menu__content {
   margin-bottom: auto;
-  flex: 50%;
-  width: 900px;
-  height: 1080px;
 }
 
 .menu__footer {
@@ -76,26 +73,15 @@ font-variant-numeric: lining-nums
 
 .menu__footer-column {}
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 /* MENU ITEM
 ============================================================================= */
 .menu__item {
   color: #fff;
-  font-size: 45px;
+  font-size: 72px;
   display: flex;
   align-items: baseline;
-  width: 80%;
+  width: 100%;
   margin-bottom: 80px;
 }
 
@@ -122,16 +108,15 @@ font-variant-numeric: lining-nums
 .menu__item-title-dots {
   display: block;
   flex: 1;
-  height: 45px;
+  height: 66px;
   margin: 0px 5px;
   border-bottom: 1px dotted rgba(255,255,255,0.5);
 }
 
 .menu__item-details {
-  font-size: 23px;
+  font-size: 32px;
   font-family: "Velour Raw";
   font-weight: normal;
-  margin-top: 10px;
 }
 
 .menu__item-details--price {
@@ -159,5 +144,5 @@ font-variant-numeric: lining-nums
 
 .menu__sub-item-accessory {
   color: #cead63;
-  margin-left: 6px;
+  margin-left: 10px;
 }
