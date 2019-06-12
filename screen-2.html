@@ -13,48 +13,48 @@
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text">SAISON</span>
+            <span class="menu__item-title-text" id="tap1_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 75cL BOTTLES 12<sup>$</sup></div>
+          <div class="menu__item-details menu__item-details--price" id="tap1_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          8.4<sup>%</sup>
+        <div class="menu__item-accessory" id="tap1_price_style">
         </div>
       </div>
 
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text">BELGIAN STRONG</span>
+            <span class="menu__item-title-text" id="tap2_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 75cL BOTTLES 11<sup>$</sup></div>
+          <div class="menu__item-details menu__item-details--price" id="tap2_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          8.0<sup>%</sup>
+        <div class="menu__item-accessory" id="tap2_price_style">
         </div>
       </div>
 
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text menu__item-title-text--mute">EXCLUSIVELY IN 75cL BOTTLES</span>
+            <span class="menu__item-title-text" id="tap3_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <div class="menu__item-details">
-            <div class="menu__sub-item">
-              <span class="menu__sub-item-text">OLD ALE X</span>
-              <span class="menu__sub-item-accessory">14<sup>$</sup></span>
-            </div>
-            <div class="menu__sub-item">
-              <span class="menu__sub-item-text">BELGIAN DARK RYE ALE W/ BRETT</span>
-              <span class="menu__sub-item-accessory">15<sup>$</sup></span>
-            </div>
-          </div>
+          <div class="menu__item-details menu__item-details--price" id="tap3_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          9.3<sup>%</sup>
+        <div class="menu__item-accessory" id="tap3_price_style">
+        </div>
+      </div>
+
+      <div class="menu__item">
+        <div class="menu__item-info">
+          <div class="menu__item-title">
+            <span class="menu__item-title-text" id="tap4_title_style"></span>
+            <span class="menu__item-title-dots"></span>
+          </div>
+          <div class="menu__item-details menu__item-details--price" id="tap4_desc_style"></div>
+        </div>
+        <div class="menu__item-accessory" id="tap4_price_style">
         </div>
       </div>
 
@@ -62,14 +62,14 @@
     <footer class="menu__footer">
       <div class="menu__footer-column">
         <div class="menu__sub-item">
-          <span class="menu__sub-item-text">FULL POURS</span>
-          <span class="menu__sub-item-accessory">7<sup>$</sup></span>
+          <span class="menu__sub-item-text" id="footer3_title_style"></span>
+          <span class="menu__sub-item-accessory" id="footer3_price_style"></span>
         </div>
       </div>
       <div class="menu__footer-column">
         <div class="menu__sub-item">
-          <span class="menu__sub-item-text">SMALL POURS 12cL/4oz</span>
-          <span class="menu__sub-item-accessory">3<sup>$</sup></span>
+          <span class="menu__sub-item-text" id="footer3_title_style"></span>
+          <span class="menu__sub-item-accessory" id="footer3_price_style"></span>
         </div>
       </div>
     </footer>
@@ -77,3 +77,203 @@
 
 </body>
 </html>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap5.json?nocache=123", function(data){
+      var tap5_title = '';
+      $.each(data, function(key, value){
+        tap5_title = value.title;
+      });
+      $('#tap5_title_style').append(tap5_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap5.json?nocache=123", function(data){
+      var tap5_price = '';
+      $.each(data, function(key, value){
+        tap5_price = value.price;
+      });
+      $('#tap5_price_style').append(tap5_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap5.json?nocache=123", function(data){
+      var tap5_desc = '';
+      $.each(data, function(key, value){
+        tap5_desc = value.descriptor;
+      });
+      $('#tap5_desc_style').append(tap5_desc)
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap6.json?nocache=123", function(data){
+      var tap6_title = '';
+      $.each(data, function(key, value){
+        tap6_title = value.title;
+      });
+      $('#tap6_title_style').append(tap6_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap6.json?nocache=123", function(data){
+      var tap6_price = '';
+      $.each(data, function(key, value){
+        tap6_price = value.price;
+      });
+      $('#tap6_price_style').append(tap6_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap6.json?nocache=123", function(data){
+      var tap6_desc = '';
+      $.each(data, function(key, value){
+        tap6_desc = value.descriptor;
+      });
+      $('#tap6_desc_style').append(tap6_desc)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap7.json?nocache=123", function(data){
+      var tap7_title = '';
+      $.each(data, function(key, value){
+        tap7_title = value.title;
+      });
+      $('#tap7_title_style').append(tap7_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap7.json?nocache=123", function(data){
+      var tap7_price = '';
+      $.each(data, function(key, value){
+        tap7_price = value.price;
+      });
+      $('#tap7_price_style').append(tap7_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap7.json?nocache=123", function(data){
+      var tap7_desc = '';
+      $.each(data, function(key, value){
+        tap7_desc = value.descriptor;
+      });
+      $('#tap7_desc_style').append(tap7_desc)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap8.json?nocache=123", function(data){
+      var tap8_title = '';
+      $.each(data, function(key, value){
+        tap8_title = value.title;
+      });
+      $('#tap8_title_style').append(tap8_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap8.json?nocache=123", function(data){
+      var tap8_price = '';
+      $.each(data, function(key, value){
+        tap8_price = value.price;
+      });
+      $('#tap8_price_style').append(tap8_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap8.json?nocache=123", function(data){
+      var tap8_desc = '';
+      $.each(data, function(key, value){
+        tap8_desc = value.descriptor;
+      });
+      $('#tap8_desc_style').append(tap8_desc)
+  });
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer3.json?nocache=123", function(data){
+      var footer3_title = '';
+      $.each(data, function(key, value){
+        footer3_title = value.title;
+      });
+      $('#footer3_title_style').append(footer3_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer3.json?nocache=123", function(data){
+      var footer3_price = '';
+      $.each(data, function(key, value){
+        footer3_price = value.price;
+      });
+      $('#footer3_price_style').append(footer3_price)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer4.json?nocache=123", function(data){
+      var footer4_title = '';
+      $.each(data, function(key, value){
+        footer4_title = value.title;
+      });
+      $('#footer4_title_style').append(footer4_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer4.json?nocache=123", function(data){
+      var footer4_price = '';
+      $.each(data, function(key, value){
+        footer4_price = value.price;
+      });
+      $('#footer4_price_style').append(footer4_price)
+  });
+});
+</script>

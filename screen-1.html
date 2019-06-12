@@ -63,14 +63,14 @@
     <footer class="menu__footer">
       <div class="menu__footer-column">
         <div class="menu__sub-item">
-          <span class="menu__sub-item-text">FULL POURS</span>
-          <span class="menu__sub-item-accessory">7<sup>$</sup></span>
+          <span class="menu__sub-item-text" id="footer1_title_style"></span>
+          <span class="menu__sub-item-accessory" id="footer1_price_style"></span>
         </div>
       </div>
       <div class="menu__footer-column">
         <div class="menu__sub-item">
-          <span class="menu__sub-item-text">SMALL POURS 12cL/4oz</span>
-          <span class="menu__sub-item-accessory">3<sup>$</sup></span>
+          <span class="menu__sub-item-text" id="footer2_title_style"></span>
+          <span class="menu__sub-item-accessory" id="footer2_price_style"></span>
         </div>
       </div>
     </footer>
@@ -222,6 +222,58 @@ $(document).ready(function(){
         tap4_desc = value.descriptor;
       });
       $('#tap4_desc_style').append(tap4_desc)
+  });
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer1.json?nocache=123", function(data){
+      var footer1_title = '';
+      $.each(data, function(key, value){
+        footer1_title = value.title;
+      });
+      $('#footer1_title_style').append(footer1_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer1.json?nocache=123", function(data){
+      var footer1_price = '';
+      $.each(data, function(key, value){
+        footer1_price = value.price;
+      });
+      $('#footer1_price_style').append(footer1_price)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer2.json?nocache=123", function(data){
+      var footer2_title = '';
+      $.each(data, function(key, value){
+        footer2_title = value.title;
+      });
+      $('#footer2_title_style').append(footer2_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("footer2.json?nocache=123", function(data){
+      var footer2_price = '';
+      $.each(data, function(key, value){
+        footer2_price = value.price;
+      });
+      $('#footer2_price_style').append(footer2_price)
   });
 });
 </script>
