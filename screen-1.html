@@ -14,52 +14,48 @@
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text" id="menu_items"></span>
+            <span class="menu__item-title-text" id="tap1_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
+          <div class="menu__item-details menu__item-details--price" id="tap1_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          7.0<sup>%</sup>
+        <div class="menu__item-accessory" id="tap1_price_style">
         </div>
       </div>
 
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text" id="menu_items"></span>
+            <span class="menu__item-title-text" id="tap2_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <!-- <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div> -->
+          <div class="menu__item-details menu__item-details--price" id="tap2_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          6.0<sup>%</sup>
+        <div class="menu__item-accessory" id="tap2_price_style">
         </div>
       </div>
 
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text">TRIPEL</span>
+            <span class="menu__item-title-text" id="tap3_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <!-- <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div> -->
+          <div class="menu__item-details menu__item-details--price" id="tap3_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          9.3<sup>%</sup>
+        <div class="menu__item-accessory" id="tap3_price_style">
         </div>
       </div>
 
       <div class="menu__item">
         <div class="menu__item-info">
           <div class="menu__item-title">
-            <span class="menu__item-title-text">BALTIC PORTER</span>
+            <span class="menu__item-title-text" id="tap4_title_style"></span>
             <span class="menu__item-title-dots"></span>
           </div>
-          <div class="menu__item-details menu__item-details--price">ALSO AVAILABLE IN 473mL CANS 4<sup>$</sup></div>
+          <div class="menu__item-details menu__item-details--price" id="tap4_desc_style"></div>
         </div>
-        <div class="menu__item-accessory">
-          6.0<sup>%</sup>
+        <div class="menu__item-accessory" id="tap4_price_style">
         </div>
       </div>
 
@@ -84,12 +80,148 @@
 </html>
 <script>
 $(document).ready(function(){
-  $.getJSON("menu.json?nocache=123", function(data){
-      var menu_data = '';
+  $.getJSON("tap1.json?nocache=123", function(data){
+      var tap1_title = '';
       $.each(data, function(key, value){
-        menu_data = value.title;
+        tap1_title = value.title;
       });
-      $('#menu_items').append(menu_data)
+      $('#tap1_title_style').append(tap1_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap1.json?nocache=123", function(data){
+      var tap1_price = '';
+      $.each(data, function(key, value){
+        tap1_price = value.price;
+      });
+      $('#tap1_price_style').append(tap1_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap1.json?nocache=123", function(data){
+      var tap1_desc = '';
+      $.each(data, function(key, value){
+        tap1_desc = value.descriptor;
+      });
+      $('#tap1_desc_style').append(tap1_desc)
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap2.json?nocache=123", function(data){
+      var tap2_title = '';
+      $.each(data, function(key, value){
+        tap2_title = value.title;
+      });
+      $('#tap2_title_style').append(tap2_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap2.json?nocache=123", function(data){
+      var tap2_price = '';
+      $.each(data, function(key, value){
+        tap2_price = value.price;
+      });
+      $('#tap2_price_style').append(tap2_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap2.json?nocache=123", function(data){
+      var tap2_desc = '';
+      $.each(data, function(key, value){
+        tap2_desc = value.descriptor;
+      });
+      $('#tap2_desc_style').append(tap2_desc)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap3.json?nocache=123", function(data){
+      var tap3_title = '';
+      $.each(data, function(key, value){
+        tap3_title = value.title;
+      });
+      $('#tap3_title_style').append(tap3_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap3.json?nocache=123", function(data){
+      var tap3_price = '';
+      $.each(data, function(key, value){
+        tap3_price = value.price;
+      });
+      $('#tap3_price_style').append(tap3_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap3.json?nocache=123", function(data){
+      var tap3_desc = '';
+      $.each(data, function(key, value){
+        tap3_desc = value.descriptor;
+      });
+      $('#tap3_desc_style').append(tap3_desc)
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap4.json?nocache=123", function(data){
+      var tap4_title = '';
+      $.each(data, function(key, value){
+        tap4_title = value.title;
+      });
+      $('#tap4_title_style').append(tap4_title)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap4.json?nocache=123", function(data){
+      var tap3_price = '';
+      $.each(data, function(key, value){
+        tap4_price = value.price;
+      });
+      $('#tap4_price_style').append(tap4_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap4.json?nocache=123", function(data){
+      var tap4_desc = '';
+      $.each(data, function(key, value){
+        tap4_desc = value.descriptor;
+      });
+      $('#tap4_desc_style').append(tap4_desc)
   });
 });
 </script>
