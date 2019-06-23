@@ -68,7 +68,7 @@ font-variant-numeric: lining-nums
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
-  grid-gap: 25px;
+  grid-gap: 50px;
 }
 
 .menu__footer-column {}
