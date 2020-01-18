@@ -228,7 +228,41 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+$(document).ready(function(){
+  $.getJSON("tap10.json?nocache=123", function(data){
+      var tap10_title = '';
+      $.each(data, function(key, value){
+        tap10_title = value.title;
+      });
+      $('#tap10_title_style').append(tap10_title)
+  });
+});
+</script>
 
+<script>
+$(document).ready(function(){
+  $.getJSON("tap10-price.json?nocache=123", function(data){
+      var tap10_price = '';
+      $.each(data, function(key, value){
+        tap10_price = value.price;
+      });
+      $('#tap10_price_style').append(tap10_price)
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $.getJSON("tap10-desc.json?nocache=123", function(data){
+      var tap10_desc = '';
+      $.each(data, function(key, value){
+        tap10_desc = value.descriptor;
+      });
+      $('#tap10_desc_style').append(tap10_desc)
+  });
+});
+</script>
 
 
 <script>
