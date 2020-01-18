@@ -253,24 +253,24 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function(){
-  $.getJSON("tap9.json?nocache=123", function(data){
-      var tap9_title = '';
+  $.getJSON("tap10.json?nocache=123", function(data){
+      var tap10_title = '';
       $.each(data, function(key, value){
         tap9_title = value.title;
       });
-      $('#tap9_title_style').append(tap9_title)
+      $('#tap10_title_style').append(tap10_title)
   });
 });
 </script>
 
 <script>
 $(document).ready(function(){
-  $.getJSON("tap9-price.json?nocache=123", function(data){
-      var tap9_price = '';
+  $.getJSON("tap10-price.json?nocache=123", function(data){
+      var tap10_price = '';
       $.each(data, function(key, value){
         tap9_price = value.price;
       });
-      $('#tap5_price_style').append(tap9_price)
+      $('#tap10_price_style').append(tap10_price)
   });
 });
 </script>
