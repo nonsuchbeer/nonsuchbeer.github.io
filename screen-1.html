@@ -232,9 +232,9 @@ $(document).ready(function(){
   $.getJSON("tap5-desc.json?nocache=123", function(data){
       var tap5_desc = '';
       $.each(data, function(key, value){
-        tap4_desc = value.descriptor;
+        tap5_desc = value.descriptor;
       });
-      $('#tap5_desc_style').append(tap4_desc)
+      $('#tap5_desc_style').append(tap5_desc)
   });
 });
 </script>
